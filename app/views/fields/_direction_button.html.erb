@@ -1,0 +1,5 @@
+<% form_for field, :url => url, :html => {:method => :post, :id=>"#{field.name}_#{direction}Form"}  do |f| %>
+ 	<a href="#<%=field.name%>_UpForm" class="submit-form <%=direction.downcase%>-link"><%=direction%></a>
+	<input type="hidden" name="field_name" value="<%=field.name%>"/>            
+	<input type="submit" id="<%=field.name%>_<%=direction%>" class="direction-button" value="<%=direction%>"/>
+<% end %>
